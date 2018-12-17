@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>occurence!</title>
+</head>
+<body>
+    <form action="">
+        <strong> Entrer la premiere chaine de caractere:</strong>  <input type="text1" id="text1" class="text1" value="">
+        <strong> Entrer la deuxieme chaine de caractere:</strong>  <input type="text2" id="text2" class="text2" value="">
+        <input type="submit" onClick="commun();" />
+       </form>
+   
+       <script>
+
+      function commun()
+           {
+               var text1 = document.getElementById("text1").value; 
+               var text2 = document.getElementById("text2").value;
+               var mot1 = text1.split(' '); 
+               var mot2= text2.split(' ');  
+               var taille1 = mot1.length;
+               var taille2 = mot2.length;
+               var commun= '';
+               for(i=0;i<taille1;i++){
+                   for(j=0;j<taille2;j++)
+                    {
+                        if(mot1[i]===mot2[j]){
+                            commun = commun + mot1[i] +' | ';
+                        }
+                    }
+               }
+              
+                        alert(commun);
+               
+
+               
+           } 
+           
+               
+       </script>
+</body>
+</html>
